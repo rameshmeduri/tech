@@ -1,3 +1,29 @@
+**`Mounting Stage` -- called in the following order**
+> constructor()  
+> static getDerivedStateFromProps()  
+> render()  
+> componentDidMount()  
+
+
+**`Updating Stage` -- called in the following order**
+> static getDerivedStateFromProps()  
+> shouldComponentUpdate()  
+> render()  
+> getSnapshotBeforeUpdate()  
+> componentDidUpdate()  
+
+**`Unmounting Stage` -- called in the following order**
+> componentWillUnmount()  
+
+**Removed Methods**
+ - componentWillUpdate()
+ - componentWillReceiveProps()
+ - componentWillMount()
+
+
+# React Life Cycle Hooks
+![](images/React_Life_Cycle.jpg)
+
 **constructor**
 - [x] initialize `state`
 - [x] before `mounted`
