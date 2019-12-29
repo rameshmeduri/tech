@@ -1,3 +1,28 @@
+##### `Hooks`
+- [x] State
+- [x] Lifecycle Methods
+- [x] Sharing Non-Visual Logic
+
+```js
+// Custom Hook -- to share logic between Components
+function useRepos(id) {
+  const [repos, setRepos] = React.useState([]); // Local State
+  const [loading, setLoading] = React.useState(true); // Local State
+
+  React.useEffect(() => { // componentDidMount & componentDidUpdate
+    
+    setLoading(true);
+
+    fetchRepos(id).then(repos => {
+      setRepos(repos);
+      setLoading(false);
+    });
+  }, [id]);
+
+  return [loading, repos];
+}
+```
+
 **`Mounting Stage` -- called in the following order**
 > constructor()  
 > static getDerivedStateFromProps()  
