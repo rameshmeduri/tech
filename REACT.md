@@ -1,6 +1,13 @@
 **`Hooks`
 
 ```js
+
+/*
+State
+Lifecycle Methods
+Sharing Non-Visual Logic
+*/
+
 // Custom Hook -- to share logic between Components
 function useRepos(id) {
   const [repos, setRepos] = React.useState([]); // Local State
