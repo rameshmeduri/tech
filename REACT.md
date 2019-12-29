@@ -1,7 +1,7 @@
 ##### `Hooks`
 - [x] State
-- [x] Lifecycle methods
-- [x] Sharing non-visual logic
+- [x] Lifecycle Methods
+- [x] Sharing Non-Visual Logic
 
 ```js
 // Custom Hook -- to share logic between Components
