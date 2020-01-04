@@ -3,7 +3,62 @@
 - [x] Lifecycle Methods
 - [x] Sharing Non-Visual Logic
 
+
+
 ```js
+// Rules
+
+function Counter () {
+  // 👍 from the top level function component
+  const [count, setCount] = React.useState(0)
+
+  if (count % 2 === 0) {
+    // 👎 not from the top level
+    React.useEffect(() => {})
+  }
+
+  const handleIncrement = () => {
+    setCount((c) => c + 1)
+
+    // 👎 not from the top level
+    React.useEffect(() => {})
+  }
+}
+
+function useAuthed () {
+  // 👍 from the top level of a custom Hook
+  const [authed, setAuthed] = React.useState(false)
+}
+class Counter extends React.Component {
+  render () {
+    // 👎 from inside a Class component
+    const [count, setCount] = React.useState(0)
+  }
+}
+function getUser () {
+  // 👎 from inside a normal function
+  const [user, setUser] = React.useState(null)
+}
+
+
+
+// useEffect
+React.useEffect(() => {
+  // Will be invoked on the initial render 
+  // and all subsequent re-renders.
+})
+
+React.useEffect(() => {
+  // Will be invoked on the initial render
+  // and when "id" or "authed" changes
+}, [id, authed])
+
+React.useEffect(() => {
+  // Will only be invoked on the initial render
+}, [])
+
+
+
 // Custom Hook -- to share logic between Components
 function useRepos(id) {
   const [repos, setRepos] = React.useState([]); // Local State
