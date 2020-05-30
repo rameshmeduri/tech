@@ -17,5 +17,12 @@
 - [x] MongoDB
 - [x] JSON
 
- 
+
+ ##### SOFTWARES ( `install` )
+- - -
+- [x] Google Chrome ( `Browser` )
+- [x] Node.js
+- [x] MongoDB ( `NoSql Database` )
+- [x] Visual Studio Code( `Source Code Editor` )
+- [x] Git ( `Version Controlling` )
 
