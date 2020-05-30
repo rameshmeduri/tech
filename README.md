@@ -18,7 +18,7 @@
 - [x] JSON
 
 
- ##### SOFTWARES ( `install` )
+##### SOFTWARES ( `install` )
 - - -
 - [x] Google Chrome ( `Browser` )
 - [x] Node.js
