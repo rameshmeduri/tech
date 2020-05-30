@@ -1,18 +1,32 @@
-# tech
+##### Frontend ( `Web` )
+- - -
 
-```js
-// This mock will make sure that we are able to access mapStateToProps, mapDispatchToProps and reactComponent in the test file.
+- [x] Javascript ( `Programming Language` )
 
-// To use this, just do `jest.mock('react-redux');` in your page.test.js file.
-const mockDispatch = jest.fn((action) => action);
+- [x] React ( `Framework` )
 
-module.exports = {
-  connect: (mapStateToProps, mapDispatchToProps) => (reactComponent) => ({
-    mapStateToProps,
-    mapDispatchToProps: (dispatch = mockDispatch, ownProps) => mapDispatchToProps(dispatch, ownProps),
-    reactComponent,
-    mockDispatch
-  }),
-  Provider: ({children}) => children
-};
-```
+- [x] HTML
+
+- [x] CSS
+
+ 
+
+##### Backend
+- - -
+
+- [x] Javascript ( `Programming Language` )
+
+- [x] Node.js ( `Platform` )
+
+- [x] Express ( `Framework` )
+
+
+##### Database ( `NoSql` )
+- - -
+
+- [x] MongoDB
+
+- [x] JSON
+
+ 
+
