@@ -63,6 +63,25 @@ function useRepos(id) {
 }
 ```
 
+#### React.memo
+- React.memo is a higher-order component
+- React renders the component and memoizes the result
+- Before the next render, if the new props are the same, React reuses the memoized result skipping the next rendering
+- You gain a performance boost: by reusing the memoized content
+- React skips rendering the component and doesn't perform a virtual DOM difference check
+- React always re-renders the component if the state changes, even if the component is wrapped in React.memo().
+
+#### useCallback
+- given the same dependency values, the hook returns the same function instance between renderings
+- handleClick variable has always the same callback function object between renderings
+- onItemClick callback is memoized by useCallback(). As long as term is the same, useCallback() returns the same function object
+
+in some cases you need to maintain a single function instance between renderings
+- function has some internal
+- When the function object is a dependency to other hooks
+- A functional component wrapped inside React.memo()
+
+
 **`Mounting Stage` -- called in the following order**
 > constructor()  
 > static getDerivedStateFromProps()  
