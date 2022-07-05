@@ -160,6 +160,39 @@ const value = useContext(Context);
 ```
 
 
+#### Render Props
+- sharing code between React components using a `prop` whose value is a `function`
+- Child component takes render prop and calls it
+
+- we pass a function from the parent component to the child component as a render prop
+- child component calls that function instead of implementing its own logic
+
+```js
+class BaseComponent extends Component {
+  state = { name: 'Danny' };
+  render() {
+    this.props.render(this.state.name);
+  }
+}
+
+class C1 extends Component {
+  render() {
+    return (
+      <BaseComponent
+        render={(name) => <h1>Good to see you today, {name}!</h1>}
+      />
+    );
+  }
+}
+
+class C2 extends Component {
+  render() {
+    return <BaseComponent render={(name) => <p>Howdy Mister {name}!</p>} />;
+  }
+}
+```
+
+
 
 **`Mounting Stage` -- called in the following order**
 > constructor()  
