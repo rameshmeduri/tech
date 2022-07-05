@@ -144,8 +144,20 @@ function factorialOf(n) {
 }
 ```
 
+#### useContext
+- allow your components to access some global data and re-render when that global data is changed
+- Context solves the props drilling problem
 
+```js
+// 1. Creating the context instance
+const Context = createContext('Default Value'); // creates a context instance
 
+// 2. Providing the value to context instance
+<Context.Provider value="test" /> // Context.Provider component available on the context instance
+
+// 3. Consuming the value from context instance
+const value = useContext(Context);
+```
 
 
 
