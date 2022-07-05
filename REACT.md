@@ -105,6 +105,38 @@ const InputEl = () => {
 };
 ```
 
+
+#### forwardRef 
+- allows parent components pass down `refs` to their children
+
+
+```js
+const InputText = forwardRef((props, ref) => <input ref={ref} {...props} />);
+
+const App = () => {
+  const ref = useRef();
+
+  const onFocus = () => {
+    ref.current.focus();
+  };
+
+  return (
+    <div className="App">
+      <InputText ref={ref} />
+      <button onClick={onFocus}>Focus</button>
+    </div>
+  );
+};
+```
+
+
+
+
+
+
+
+
+
 **`Mounting Stage` -- called in the following order**
 > constructor()  
 > static getDerivedStateFromProps()  
