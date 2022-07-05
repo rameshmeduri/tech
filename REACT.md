@@ -26,6 +26,11 @@ setCount((prevCount) => prevCount + 1);
 ```
 
 ##### useEffect
+- the hook that runs side-effects independently of rendering
+- callback is executed right after changes were being pushed to DOM
+- SideEffect Ex : API Calls, DOM Manipulation, setTimeout
+- The component rendering and side-effect logic are independent
+- https://dmitripavlutin.com/dbe428bafd5308bb2744d7c315c81d9a/react-useeffect-callback-cleanup-3.svg
 ```js
 useEffect(() => { }) // Every Time
 useEffect(() => { }, []) // On Mount
