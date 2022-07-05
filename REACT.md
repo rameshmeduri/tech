@@ -129,8 +129,20 @@ const App = () => {
 };
 ```
 
+#### useMemo
+- memoize expensive computations
+- return the memoized value 
+- `useCallback` -- returns the same function instance as long as dependencies don't change
+- `useCallback` -- memoize callbacks
 
 
+```js
+const factorial = useMemo(() => factorialOf(n), [n]);
+
+function factorialOf(n) {
+  return n <= 0 ? 1 : n * factorialOf(n - 1);
+}
+```
 
 
 
