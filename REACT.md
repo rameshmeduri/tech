@@ -82,6 +82,29 @@ in some cases you need to maintain a single function instance between renderings
 - A functional component wrapped inside React.memo()
 
 
+#### useRef
+- takes the initial value and returns a reference
+- reference.current accesses the reference value, and reference.current = newValue updates the reference value
+- The value of the reference is persisted (stays the same) between component re-renderings
+- Updating a reference doesn't trigger a component re-rendering
+- The reference update is synchronous
+- the state update is asynchronous
+
+
+```js
+const InputEl = () => {
+  const inputRef = useRef();
+
+  useEffect(() => {
+    console.log(inputRef.current); // Logs `HTMLInputElement`
+    inputRef.current.focus();
+  }, []);
+
+  console.log(inputRef.current); // Logs `undefined` during initial rendering
+  return <input ref={inputRef} type="text" />;
+};
+```
+
 **`Mounting Stage` -- called in the following order**
 > constructor()  
 > static getDerivedStateFromProps()  
