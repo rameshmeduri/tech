@@ -12,6 +12,21 @@
 - [x] Hooks can call other Hooks
 
 
+##### useState(lazy initialization)
+-----------------------------------
+- if we need initial state on the first render only, then we can pass a `callback` to `useState`
+- `callback` returns the initial state
+```js
+const initState = () => Number(window.localStorage.getItem('count'));
+```
+
+##### setState(Callback)
+------------------------
+- compute new state based on previous state
+```js
+setCount((prevCount) => prevCount + 1);
+```
+
 ##### useEffect
 ```js
 useEffect(() => { }) // Every Time
