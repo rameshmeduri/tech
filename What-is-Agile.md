@@ -1,3 +1,4 @@
+
 # What-is-Agile
 
 1️⃣  Value #1: Individuals and interactions
